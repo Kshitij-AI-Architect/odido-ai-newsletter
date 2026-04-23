@@ -1,31 +1,32 @@
 # Odido AI Newsletter Generator
 
-An automated pipeline that ingests the [zenml/llmops-database](https://huggingface.co/datasets/zenml/llmops-database) dataset from Hugging Face, selects the most relevant AI/LLM articles from the past week, summarises them using Azure OpenAI, and renders a polished **Markdown newsletter** — automatically, every Monday via GitHub Actions.
+An automated pipeline that reads AI/LLM articles from Hugging Face, picks the most relevant ones, summarises them using Azure OpenAI (GPT-4o), rates the quality using an open-source AI judge (Llama 3 via Groq), and produces a polished weekly newsletter in Markdown — all automatically, every Monday.
 
 ---
 
 ## How It Works
 
 ```
-Hugging Face Dataset
+Hugging Face Dataset  (1,479 AI/LLM articles)
         │
         ▼
-  1. load_data.py       ← Download & clean the dataset
+  1. load_data.py         ← Download and clean the dataset
         │
         ▼
-  2. select_items.py    ← Filter to last 7 days, deduplicate, score relevance
+  2. select_items.py      ← Filter to recent articles, remove duplicates, score relevance
         │
         ▼
-  3. categorize.py      ← Assign each item to a section (Research / Industry / Use Cases)
+  3. categorize.py        ← Sort into 3 sections: Research / Industry News / Cool Use Cases
         │
         ▼
-  4. summarize.py       ← Generate 2-sentence summaries via Azure OpenAI
+  4. summarize.py         ← Generate 2-sentence summaries using Azure OpenAI (GPT-4o)
         │
         ▼
-  5. render_newsletter.py ← Build and write newsletter.md
+  4b. judge.py            ← Rate each summary for Faithfulness & Clarity using Llama 3 (Groq)
+        │
+        ▼
+  5. render_newsletter.py ← Build and save newsletter.md with all content and scores
 ```
-
-Each step is a self-contained Python module. The pipeline is wired together in `run_pipeline.py`.
 
 ---
 
@@ -34,38 +35,40 @@ Each step is a self-contained Python module. The pipeline is wired together in `
 ```
 odido-ai-newsletter/
 ├── src/
-│   ├── load_data.py          # Step 1 – Ingest HuggingFace dataset
-│   ├── select_items.py       # Step 2 – Filter, dedup, score
-│   ├── categorize.py         # Step 3 – Rule-based section assignment
-│   ├── summarize.py          # Step 4 – Azure OpenAI summarisation
-│   └── render_newsletter.py  # Step 5 – Markdown rendering
+│   ├── load_data.py           # Step 1 – Download HuggingFace dataset
+│   ├── select_items.py        # Step 2 – Filter, deduplicate, score
+│   ├── categorize.py          # Step 3 – Assign articles to sections
+│   ├── summarize.py           # Step 4 – Azure OpenAI summarisation
+│   ├── judge.py               # Step 4b – LLM-as-a-Judge quality scoring (Groq + Llama 3)
+│   └── render_newsletter.py   # Step 5 – Write newsletter.md
 ├── .github/
 │   └── workflows/
-│       └── weekly_newsletter.yml  # Scheduled GitHub Actions job
-├── run_pipeline.py           # Main entry point
-├── newsletter.md             # Sample generated newsletter
-├── requirements.txt
-├── .env.example
+│       └── weekly_newsletter.yml   # Runs automatically every Monday
+├── index.html                 # Browser frontend to view the newsletter
+├── run_pipeline.py            # Main entry point — runs all steps
+├── newsletter.md              # Latest generated newsletter
+├── requirements.txt           # Python dependencies
+├── .env.example               # Template for credentials
 └── README.md
 ```
 
 ---
 
-## Setup (Local)
+## Local Setup
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/odido-ai-newsletter.git
+git clone https://github.com/Kshitij-AI-Architect/odido-ai-newsletter.git
 cd odido-ai-newsletter
 ```
 
 ### 2. Create a virtual environment
 
-```bash
+```powershell
 python -m venv .venv
-source .venv/bin/activate        # macOS/Linux
-.venv\Scripts\activate           # Windows
+.\.venv\Scripts\activate        # Windows
+source .venv/bin/activate       # macOS/Linux
 ```
 
 ### 3. Install dependencies
@@ -74,81 +77,92 @@ source .venv/bin/activate        # macOS/Linux
 pip install -r requirements.txt
 ```
 
-### 4. Configure environment variables
+### 4. Set up credentials
 
 ```bash
-cp .env.example .env
+copy .env.example .env
 ```
 
-Open `.env` and fill in your Azure OpenAI credentials:
+Open `.env` and fill in your values:
 
 ```env
-AZURE_OPENAI_API_KEY=your-api-key-here
-AZURE_OPENAI_ENDPOINT=https://your-resource-name.openai.azure.com/
-AZURE_OPENAI_DEPLOYMENT=your-deployment-name
-AZURE_OPENAI_API_VERSION=2024-02-01
+# Azure OpenAI — used to generate summaries (GPT-4o)
+AZURE_OPENAI_API_KEY=your-key
+AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
+AZURE_OPENAI_DEPLOYMENT=gpt-4o
+AZURE_OPENAI_API_VERSION=2023-12-01-preview
+
+# Groq — used to run the LLM-as-a-Judge (Llama 3, free at console.groq.com)
+GROQ_API_KEY=your-groq-key
 ```
 
 ### 5. Run the pipeline
 
-```bash
-python run_pipeline.py
+```powershell
+python run_pipeline.py --lookback-days 90 --output newsletter.md
 ```
 
-The newsletter is saved to `newsletter.md` in the project root.
+### 6. View in browser
 
-**Optional flags:**
-
-```bash
-# Look back 14 days instead of 7
-python run_pipeline.py --lookback-days 14
-
-# Save output to a custom path
-python run_pipeline.py --output output/week-42.md
+```powershell
+python -m http.server 8080
 ```
+
+Open: `http://localhost:8080`
 
 ---
 
-## Automated Weekly Run (GitHub Actions)
+## GitHub Actions (Automated Weekly Run)
 
-The workflow in `.github/workflows/weekly_newsletter.yml` runs **every Monday at 08:00 UTC**.
+The workflow runs **every Monday at 08:00 UTC** automatically.
 
-### Setup Steps
-
-1. Push this repository to GitHub.
-2. Go to **Settings → Secrets and variables → Actions**.
-3. Add the following repository secrets:
+### One-time setup:
+1. Push repo to GitHub
+2. Go to **Settings → Secrets and variables → Actions**
+3. Add these secrets:
    - `AZURE_OPENAI_API_KEY`
    - `AZURE_OPENAI_ENDPOINT`
    - `AZURE_OPENAI_DEPLOYMENT`
    - `AZURE_OPENAI_API_VERSION`
-4. The pipeline runs automatically each Monday and commits the updated `newsletter.md` back to the repository.
+   - `GROQ_API_KEY`
+4. Go to **Settings → Actions → General → Workflow permissions** → set to **Read and write**
 
-You can also trigger it manually from the **Actions** tab using the **"Run workflow"** button.
+To trigger manually: **Actions tab → Weekly AI Newsletter → Run workflow**
+
+---
+
+## LLM-as-a-Judge (Quality Evaluation)
+
+Each generated summary is independently scored by **Llama 3** (an open-source model running on Groq's free API) on two dimensions:
+
+| Score | What it means |
+|---|---|
+| **Faithfulness (1-5)** | Does the summary stick to facts in the source? No hallucination? |
+| **Clarity (1-5)** | Is it easy to read, concise, and professional? |
+
+Scores appear in `newsletter.md` and as badges in the browser frontend.
+
+Using a **different model as judge** (Llama 3) than the one that generated summaries (GPT-4o) avoids self-evaluation bias. This is the standard **LLM-as-a-Judge** pattern used in production AI evaluation.
 
 ---
 
 ## Design Decisions
 
-| Decision | Rationale |
+| Decision | Why |
 |---|---|
-| **Rule-based scoring** | Simple, transparent, easy to explain — no black-box ML |
-| **Rule-based categorisation** | Fast, zero cost, instantly tunable via keyword lists |
-| **One LLM call per article** | Predictable token usage, easy to debug individual outputs |
-| **Azure OpenAI** | Enterprise-grade, no data leaves the tenant |
-| **Markdown output** | Portable, renders on GitHub, easy to copy into email/Slack |
-| **GitHub Actions cron** | Zero infrastructure needed for scheduling |
-
----
-
-## Sample Newsletter
-
-See [`newsletter.md`](newsletter.md) for a sample output generated from the dataset.
+| One file per pipeline step | Clean separation — easy to read, test, and explain |
+| Rule-based scoring & categorisation | Fully transparent, no black-box ML, easy to tune |
+| One LLM call per article | Predictable cost, easy to debug |
+| Azure OpenAI for summarisation | Enterprise-grade, data stays within tenant |
+| Groq + Llama 3 as judge | Free, open-source, independent model — avoids self-evaluation bias |
+| GitHub Actions cron | Zero infrastructure, runs automatically every Monday |
+| Markdown output | Works on GitHub, easy to share in email or Slack |
 
 ---
 
 ## Requirements
 
 - Python 3.11+
-- Azure OpenAI resource with a deployed chat model (e.g., `gpt-4o`, `gpt-35-turbo`)
-- Hugging Face `datasets` library (downloads dataset automatically, no token needed)
+- Azure OpenAI deployment (GPT-4o or GPT-3.5)
+- Groq API key — free at [console.groq.com](https://console.groq.com)
+- No Hugging Face token needed (public dataset)
