@@ -37,9 +37,11 @@ jobs:
           AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
           AZURE_OPENAI_DEPLOYMENT: ${{ secrets.AZURE_OPENAI_DEPLOYMENT }}
           AZURE_OPENAI_API_VERSION: ${{ secrets.AZURE_OPENAI_API_VERSION }}
+          # Use manual input if triggered via UI, otherwise default to 90 days
+          LOOKBACK_DAYS: ${{ github.event.inputs.lookback_days || 90 }}
         run: |
           python run_pipeline.py \
-            --lookback-days ${{ github.event.inputs.lookback_days || '90' }} \
+            --lookback-days $LOOKBACK_DAYS \
             --output newsletter.md
 
       - name: Commit and push newsletter

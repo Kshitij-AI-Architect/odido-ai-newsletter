@@ -87,8 +87,12 @@ def select_weekly_items(df: pd.DataFrame, lookback_days: int = 7) -> pd.DataFram
     weekly = weekly.drop(columns=["_title_norm"])
     print(f"After deduplication: {len(weekly)} items")
 
+    if weekly.empty:
+        print("No items found for this period.")
+        return weekly
+
     # --- Scoring ---
-    weekly["relevance_score"] = weekly.apply(_relevance_score, axis=1)
+    weekly["relevance_score"] = weekly.apply(_relevance_score, axis=1).astype(int)
     weekly = weekly.sort_values("relevance_score", ascending=False)
 
     top = weekly.head(MAX_ITEMS).reset_index(drop=True)
