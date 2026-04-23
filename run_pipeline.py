@@ -32,6 +32,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from src.load_data import load_llmops_data
+from src.validate_data import validate_dataframe
 from src.select_items import select_weekly_items
 from src.categorize import categorize_items
 from src.summarize import summarize_items
@@ -66,6 +67,10 @@ def main() -> None:
     # Step 1 – Ingest
     print("\n[Step 1/5] Loading dataset from Hugging Face...")
     df = load_llmops_data()
+
+    # Step 1b – Validate schema (data contract check)
+    print("\n[Step 1b/5] Validating dataset schema...")
+    df = validate_dataframe(df)
 
     # Step 2 – Filter & score
     print(f"\n[Step 2/5] Selecting items from the last {args.lookback_days} days...")
