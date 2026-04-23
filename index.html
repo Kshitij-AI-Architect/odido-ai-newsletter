@@ -191,6 +191,19 @@
       color: var(--text-secondary);
       line-height: 1.6;
     }
+    .judge-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      background: var(--odido-gray-bg);
+      border: 1px solid var(--odido-gray-line);
+      border-radius: 8px;
+      padding: 5px 10px;
+      font-size: .78rem;
+      color: var(--text-secondary);
+    }
+    .judge-badge strong { color: var(--text-primary); }
 
     /* ── Closing card ─────────────────────────────────────── */
     .closing-card {
@@ -416,11 +429,17 @@
           ? `<a href="${escHtml(art.url)}" target="_blank" rel="noopener">${escHtml(art.title)}</a>`
           : escHtml(art.title);
 
+        // Extract judge scores if present (lines starting with "> 🤖")
+        const summaryLines = art.summary.filter(l => !l.startsWith("🤖") && !l.startsWith("> 🤖"));
+        const judgeLine = art.summary.find(l => l.includes("AI Judge:"));
+        const judgeText = judgeLine ? judgeLine.replace(/^>?\s*🤖\s*\*\*AI Judge:\*\*\s*/, "").trim() : "";
+
         html += `
           <div class="article-card ${cls}">
             <h3>${titleHtml}</h3>
             ${art.meta ? `<div class="article-meta">${escHtml(art.meta)}</div>` : ""}
-            <div class="article-summary">${escHtml(art.summary.join(" "))}</div>
+            <div class="article-summary">${escHtml(summaryLines.join(" "))}</div>
+            ${judgeText ? `<div class="judge-badge">🤖 <strong>AI Judge:</strong> ${escHtml(judgeText)}</div>` : ""}
           </div>`;
       }
 

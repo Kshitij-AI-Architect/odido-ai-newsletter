@@ -114,6 +114,11 @@ def render_newsletter(df: pd.DataFrame, output_path: str = "newsletter.md") -> s
                 lines.append(f"*{date_str}*\n")
             lines.append(f"{summary}\n")
 
+            # Quality scores from LLM-as-a-Judge (shown only if available)
+            quality_label = row.get("quality_label", "")
+            if quality_label:
+                lines.append(f"> 🤖 **AI Judge:** {quality_label}\n")
+
         lines.append("---\n")
 
     lines.append(f"## 👋 Until Next Week\n")

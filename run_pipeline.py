@@ -35,6 +35,7 @@ from src.load_data import load_llmops_data
 from src.select_items import select_weekly_items
 from src.categorize import categorize_items
 from src.summarize import summarize_items
+from src.judge import judge_summaries
 from src.render_newsletter import render_newsletter
 
 
@@ -81,6 +82,10 @@ def main() -> None:
     # Step 4 – Summarise
     print("\n[Step 4/5] Generating summaries with Azure OpenAI...")
     df = summarize_items(df)
+
+    # Step 4b – LLM-as-a-Judge evaluation (open-source Llama 3 via Groq)
+    print("\n[Step 4b/5] Running LLM-as-a-Judge quality evaluation...")
+    df = judge_summaries(df)
 
     # Step 5 – Render
     print(f"\n[Step 5/5] Rendering newsletter to '{args.output}'...")
