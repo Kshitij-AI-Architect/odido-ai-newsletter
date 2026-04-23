@@ -46,8 +46,8 @@ jobs:
 
       - name: Commit and push newsletter
         run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name  "Odido Newsletter Pipeline"
+          git config user.email "newsletter@odido.nl"
           git add newsletter.md
-          git diff --cached --quiet || git commit -m "chore: weekly newsletter $(date +'%Y-%m-%d')"
+          git diff --cached --quiet || git commit -m "newsletter: weekly update $(date +'%Y-%m-%d')"
           git push
