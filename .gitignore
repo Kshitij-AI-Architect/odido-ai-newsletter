@@ -1,0 +1,24 @@
+# Environment – never commit credentials
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# HuggingFace cache
+~/.cache/huggingface/
+
+# Output (optional – remove this line if you want to commit newsletters)
+# newsletter.md
