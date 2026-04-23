@@ -33,7 +33,7 @@ from openai import OpenAI
 
 
 GROQ_BASE_URL = "https://api.groq.com/openai/v1"
-JUDGE_MODEL = "llama3-70b-8192"   # free, strong reasoning model on Groq
+JUDGE_MODEL = "llama-3.3-70b-versatile"   # free, strong reasoning model on Groq
 
 # Score labels used in the newsletter output
 SCORE_LABELS = {1: "⭐", 2: "⭐⭐", 3: "⭐⭐⭐", 4: "⭐⭐⭐⭐", 5: "⭐⭐⭐⭐⭐"}

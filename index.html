@@ -370,7 +370,13 @@
       // HR (---) → skip
       if (/^-{3,}$/.test(line.trim())) continue;
 
-      // Blockquote / badge → skip
+      // Judge line (blockquote containing AI Judge scores) — capture it
+      if (line.startsWith(">") && line.includes("AI Judge:")) {
+        if (currentArticle) currentArticle.summary.push(line);
+        continue;
+      }
+
+      // Other blockquotes → skip
       if (line.startsWith(">")) continue;
 
       // Collect summary text
