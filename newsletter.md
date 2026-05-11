@@ -1,4 +1,4 @@
-# Odido AI Newsletter — Week of May 04, 2026
+# Odido AI Newsletter — Week of May 11, 2026
 
 > *Generated automatically every week from the latest AI/LLM research and news.*
 
@@ -6,23 +6,23 @@
 
 ## 👋 This Week in AI
 
-Happy May, Odido tech team! This week, we're diving into the cutting edge of AI agents revolutionizing industries—from smarter patient communication in healthcare to self-service BI with Text-to-SQL and automated media planning. Plus, we explore production-ready AI architectures, scalable document processing, and coding tools that are reshaping developer productivity. Let’s unlock the future together!
+This week, we’re diving deep into the future of scalable, agent-driven AI infrastructure, from multimodal visual intelligence to enterprise-level context engineering. Whether it’s refining AI-powered mortgage tools or building collaborative agent workspaces, Odido’s tech team is exploring how cutting-edge advancements can transform production systems and drive smarter, faster organizational learning. Let’s get started!
 
 ---
 
 ## 🔬 Research Highlights
 
-### [Infrastructure Noise in Agentic Coding Evaluations](https://www.zenml.io/llmops-database/infrastructure-noise-in-agentic-coding-evaluations)
-*anthropic · Feb 06*
+### [Scaling Multimodal Visual AI with Self-Supervised Learning for Real-Time Generation](https://www.zenml.io/llmops-database/scaling-multimodal-visual-ai-with-self-supervised-learning-for-real-time-generation)
+*black_forest_labs · May 09*
 
-Anthropic found that differences in infrastructure setup can significantly impact the performance of AI coding benchmarks, sometimes more than the gap between top-performing models. This highlights the importance of optimizing resource configurations to ensure reliable evaluations and avoid misleading results in AI development.
+Black Forest Labs introduces Selfflow, a self-supervised learning method that unifies multimodal AI training across images, video, and audio without relying on external encoders. This approach could help Odido's tech team optimize AI product performance by reducing latency and scaling real-time generative capabilities.
 
 > 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
 
 ### [AI-Generated Trip Reports for Outdoor Recreation Guides](https://www.zenml.io/llmops-database/ai-generated-trip-reports-for-outdoor-recreation-guides)
 *guidesly · Apr 25*
 
-Guidesly's Jack AI automates marketing content creation for outdoor recreation guides by processing trip data like photos, videos, and metadata using serverless architecture and advanced AI models. This showcases how combining multi-modal AI, prompt engineering, and scalable infrastructure can optimize workflows and reduce manual effort in content generation.
+Guidesly's Jack AI automates the creation of marketing content for outdoor recreation guides by transforming trip data like photos and videos into ready-to-use materials. This showcases how serverless architecture and advanced AI models can streamline workflows, optimize costs, and inspire new applications in AI product development.
 
 > 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
 
@@ -30,17 +30,38 @@ Guidesly's Jack AI automates marketing content creation for outdoor recreation g
 
 ## 📰 Industry News
 
+### [Building Production AI Agent Infrastructure at Scale with Claude Managed Agents](https://www.zenml.io/llmops-database/building-production-ai-agent-infrastructure-at-scale-with-claude-managed-agents)
+*anthropic · May 08*
+
+Anthropic introduces Claude Managed Agents, a platform designed to simplify building and scaling stateful AI agents for production use. This could help tech teams overcome infrastructure challenges like sandboxing, async execution, and state management, accelerating the deployment of reliable AI products.
+
+> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
+
+### [Context Engine for Continual Learning in AI Coding Agents](https://www.zenml.io/llmops-database/context-engine-for-continual-learning-in-ai-coding-agents)
+*applied_commute · May 09*
+
+Applied Compute developed a system that helps AI coding agents continuously learn and retrieve important context from past interactions to improve task performance. This could enhance efficiency and accuracy for tech teams building AI products by enabling agents to better understand and adapt to enterprise-specific needs.
+
+> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
+
 ### [Real-Time Access Control and Credit System for High-Scale LLM Products](https://www.zenml.io/llmops-database/real-time-access-control-and-credit-system-for-high-scale-llm-products)
 *openai · Feb 17*
 
-OpenAI developed a real-time access control and credit system to handle scaling challenges and improve user experience for high-demand AI products like Codex and Sora. This approach could inspire tech teams to design scalable, reliable systems that balance user needs with operational efficiency in AI-driven applications.
+OpenAI developed a real-time access control system that integrates rate limits with a flexible credit-based model to handle scaling challenges in high-usage AI products like Codex and Sora. This approach could help tech teams ensure reliability, optimize latency, and maintain user trust during rapid adoption of AI-driven services.
 
 > 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
 
 ### [Building Claude Code: Scaling AI-Powered Development from Terminal Prototype to Production](https://www.zenml.io/llmops-database/building-claude-code-scaling-ai-powered-development-from-terminal-prototype-to-production)
 *anthropic · Feb 18*
 
-This is about how Anthropic's Claude Code grew from a basic prototype into a widely-used AI coding tool, driving significant productivity gains and reshaping software development workflows. It highlights the potential of iterative development and AI-powered tools to accelerate coding efficiency and innovation for tech teams.
+This is about how Anthropic scaled Claude Code from a simple prototype to a widely-used AI coding tool that drives global development and boosts engineering productivity. It highlights strategies like rapid iteration, user feedback, and adapting to evolving AI capabilities, offering valuable insights for tech teams building AI-driven tools.
+
+> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
+
+### [Building an Autonomous AI Analytics Agent for Enterprise Data Analysis](https://www.zenml.io/llmops-database/building-an-autonomous-ai-analytics-agent-for-enterprise-data-analysis)
+*meta · Apr 06*
+
+Meta developed an AI-powered Analytics Agent that automates enterprise data analysis by writing and executing SQL queries based on personalized context and iterative reasoning. This approach could inspire tech teams to streamline repetitive tasks, enhance productivity, and build smarter autonomous systems for data-driven decision-making.
 
 > 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
 
@@ -48,80 +69,59 @@ This is about how Anthropic's Claude Code grew from a basic prototype into a wid
 
 ## 💡 Cool Use Cases
 
-### [AI-Powered Conversational Contact Center for Healthcare Patient Communication](https://www.zenml.io/llmops-database/ai-powered-conversational-contact-center-for-healthcare-patient-communication)
-*clarus_care · Feb 04*
+### [Building a Production AI Slack Bot with Pydantic AI and Logfire](https://www.zenml.io/llmops-database/building-a-production-ai-slack-bot-with-pydantic-ai-and-logfire)
+*tiger_data · May 08*
 
-Clarus Care has implemented a generative AI-powered conversational system to streamline patient communication, replacing traditional menu-based IVR with natural language interactions. This showcases how advanced AI models and tools like Amazon Bedrock can drive scalable, real-time applications with multi-intent handling, offering valuable insights for building reliable and efficient AI-driven solutions.
-
-> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
-
-### [AI Agent for Self-Service Business Intelligence with Text-to-SQL](https://www.zenml.io/llmops-database/ai-agent-for-self-service-business-intelligence-with-text-to-sql)
-*bgl · Feb 04*
-
-BGL developed an AI agent that enables business users to generate accurate analytics insights from natural language queries, addressing bottlenecks in data analysis workflows. This showcases how integrating tools like Claude Agent SDK and Amazon Bedrock can streamline query handling while ensuring scalability, compliance, and robust error management in AI-driven systems.
+Tiger Data built an AI-powered Slack bot to streamline company communication by providing context-aware responses and handling thousands of conversations simultaneously. This showcases practical strategies for scaling AI systems, optimizing latency, and improving error handling in real-world applications.
 
 > 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
 
-### [One-Shot End-to-End Coding Agents for Developer Productivity](https://www.zenml.io/llmops-database/one-shot-end-to-end-coding-agents-for-developer-productivity)
-*stripe · Feb 10*
+### [Scaling Model Context Protocol (MCP) Infrastructure for Enterprise Agentic AI](https://www.zenml.io/llmops-database/scaling-model-context-protocol-mcp-infrastructure-for-enterprise-agentic-ai)
+*uber · May 08*
 
-Stripe has introduced "Minions," AI-powered coding agents capable of autonomously completing entire coding tasks in one go to boost developer efficiency. This could inspire AI teams to explore similar agent-based systems for streamlining workflows and accelerating product development.
-
-> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
-
-### [GenAI-Powered Document Classification for Community Management](https://www.zenml.io/llmops-database/genai-powered-document-classification-for-community-management)
-*associa · Feb 10*
-
-Associa leveraged generative AI with AWS tools to automate the classification of millions of documents, achieving high accuracy and cost efficiency. This demonstrates how scalable AI solutions can optimize workflows, reduce latency, and manage large-scale data processing effectively.
+Uber developed a centralized system to streamline and secure the use of AI agents across its massive infrastructure, addressing challenges like fragmented integrations and inconsistent governance. This approach highlights how standardization and automation can enhance scalability, security, and efficiency for teams building AI-driven solutions.
 
 > 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
 
-### [Scalable Intelligent Document Processing with Multi-Tenant Serverless Architecture](https://www.zenml.io/llmops-database/scalable-intelligent-document-processing-for-healthcare-documents-using-generative-ai)
-*ricoh · Mar 11*
+### [Building a Public AI Agent Workspace for Organizational Learning](https://www.zenml.io/llmops-database/building-a-public-ai-agent-workspace-for-organizational-learning)
+*shopify · May 10*
 
-Ricoh streamlined healthcare document processing by adopting a scalable serverless architecture with advanced AI tools like Amazon Textract and Bedrock. This approach highlights efficient ways to handle rapid growth, reduce custom engineering time, and ensure reliability in high-stakes AI applications.
-
-> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
-
-### [Multi-Agent Architecture for Automated Advertising Media Planning](https://www.zenml.io/llmops-database/multi-agent-architecture-for-automated-advertising-media-planning)
-*spotify · Feb 21*
-
-Spotify developed a multi-agent AI system to streamline advertising media planning, reducing a complex manual process to a quick conversational interface. This showcases how advanced agent-based architectures can optimize workflows, cut latency, and minimize technical debt in AI-driven systems.
+Shopify created River, an AI coding agent that works exclusively in public Slack channels to foster organizational learning through shared interactions. This approach could inspire tech teams to design AI tools that enhance collaboration and knowledge sharing while improving development workflows.
 
 > 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
 
-### [Building Production-Ready AI Agents: OpenAI Codex CLI Architecture and Agent Loop Design](https://www.zenml.io/llmops-database/building-production-ready-ai-agents-openai-codex-cli-architecture-and-agent-loop-design)
-*openai · Feb 21*
+### [Agentic Search and Context Engineering for Production LLM Systems](https://www.zenml.io/llmops-database/agentic-search-and-context-engineering-for-production-llm-systems)
+*elastic · May 09*
 
-This explores how OpenAI's Codex CLI uses an advanced agent loop to manage interactions between users, language models, and tools for reliable, production-ready code execution. It highlights techniques like prompt caching and context management that can inspire efficient, scalable design in AI-driven systems.
-
-> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
-
-### [Multi-Agent AI System for Investment Thesis Validation Using Devil's Advocate](https://www.zenml.io/llmops-database/multi-agent-ai-system-for-investment-thesis-validation-using-devil-s-advocate)
-*linqalpha · Feb 12*
-
-LinqAlpha's Devil's Advocate uses AI to challenge investment ideas by uncovering blind spots and generating counterarguments based on diverse financial data sources. This showcases how multi-agent systems can tackle high-stakes applications with reliability, scalability, and compliance, offering insights for building robust AI products.
-
-> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
-
-### [AI-Powered IT Operations Management with Multi-Agent Systems](https://www.zenml.io/llmops-database/ai-powered-it-operations-management-with-multi-agent-systems)
-*iberdrola · Feb 11*
-
-Iberdrola has used AI agents to streamline IT operations in ServiceNow, improving change request validation, incident management, and decision-making processes with advanced multi-agent systems. This showcases how AI-driven architectures can enhance reliability, scalability, and compliance in high-stakes, complex environments.
+This case study explores how Elastic uses agentic search systems and context engineering to enhance information retrieval for production LLM applications. It highlights practical strategies for building dynamic, multi-source search tools that can improve the performance and adaptability of AI products.
 
 > 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
 
 ### [AI-Powered Home Loan Guardian for Mortgage Refinancing](https://www.zenml.io/llmops-database/ai-powered-mortgage-refinance-journey-with-agentic-ai)
 *lendi · Mar 11*
 
-Lendi created Guardian, an AI-driven system that simplifies mortgage refinancing by providing real-time loan insights and automating broker workflows. It showcases how multi-agent architectures and robust orchestration can tackle high-stakes, compliance-heavy applications in finance.
+Lendi has created an AI-powered system called Guardian to simplify mortgage refinancing by providing real-time loan insights and conversational support. This showcases how multi-agent systems and scalable architectures like Kubernetes can be leveraged to tackle high-stakes applications with compliance and security at the forefront.
 
 > 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
 
-### [Building and Deploying the Codex App: A Multi-Agent AI Development Environment](https://www.zenml.io/llmops-database/building-and-deploying-the-codex-app-a-multi-agent-ai-development-environment)
-*openai · Feb 21*
+### [AI-Powered IT Operations Management with Multi-Agent Systems](https://www.zenml.io/llmops-database/ai-powered-it-operations-management-with-multi-agent-systems)
+*iberdrola · Feb 11*
 
-OpenAI has developed a GUI application called Codex App, designed as a command center for managing AI-powered coding agents and enabling delegation-based development workflows. This could streamline complex coding tasks and enhance productivity for tech teams building AI-driven products.
+Iberdrola used AI agents to streamline IT operations in ServiceNow, improving processes like change request validation and incident management. This showcases how multi-agent systems can enhance scalability, reliability, and compliance in high-stakes, AI-driven applications.
+
+> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
+
+### [Multi-Agent AI System for Investment Thesis Validation Using Devil's Advocate](https://www.zenml.io/llmops-database/multi-agent-ai-system-for-investment-thesis-validation-using-devil-s-advocate)
+*linqalpha · Feb 12*
+
+LinqAlpha's Devil's Advocate is an AI system that uses multiple agents to challenge investment ideas by uncovering blind spots and generating counterarguments based on diverse financial data sources. This showcases how multi-agent architectures can tackle high-stakes, complex tasks with reliability, offering insights into building scalable and compliant AI solutions.
+
+> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
+
+### [Extreme Harness Engineering: Building Production Software with Zero Human-Written Code](https://www.zenml.io/llmops-database/extreme-harness-engineering-building-production-software-with-zero-human-written-code)
+*openai · Apr 07*
+
+OpenAI experimented with building production software entirely through AI-generated code, creating an autonomous orchestration system called "Symphony" to manage multiple agents without human intervention. This approach could transform how tech teams develop AI products by streamlining workflows, improving scalability, and reducing manual coding bottlenecks.
 
 > 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
 
@@ -129,7 +129,7 @@ OpenAI has developed a GUI application called Codex App, designed as a command c
 
 ## 👋 Until Next Week
 
-Thanks for diving into this week’s AI insights with us! We hope you explore the links, spark new ideas, and stay curious. Wishing you a fantastic week ahead—see you next time!
+Thanks for joining us this week! Dive into the links, discover something new, and stay curious. Wishing you a fantastic week ahead—see you next time!
 
 
 *This newsletter is auto-generated by the Odido AI Newsletter Pipeline.*
