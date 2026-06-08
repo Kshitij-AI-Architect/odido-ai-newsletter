@@ -1,4 +1,4 @@
-# Odido AI Newsletter — Week of June 01, 2026
+# Odido AI Newsletter — Week of June 08, 2026
 
 > *Generated automatically every week from the latest AI/LLM research and news.*
 
@@ -6,23 +6,23 @@
 
 ## 👋 This Week in AI
 
-Happy June, Odido tech team! This week, we're diving into the cutting edge of AI-driven automation, from securing systems with intelligent vulnerability discovery to scaling enterprise agents with reinforcement learning. Whether it's streamlining workflows, decoding customer feedback, or revolutionizing contract analysis, these innovations are all about turning complex challenges into seamless, scalable solutions. Let’s explore!
+Happy Monday, Odido team! This week, we’re diving into the cutting edge of scalable AI, from autonomous agents thriving in real-world business scenarios to deep learning breakthroughs in transcription and financial automation. Whether it’s tackling tool confusion in coding agents or unleashing Claude-powered analytics, these updates showcase how AI is reshaping innovation at every level. Let’s explore!
 
 ---
 
 ## 🔬 Research Highlights
 
-### [AI-Powered Bug Routing System Using RAG and Multimodal Processing](https://www.zenml.io/llmops-database/ai-powered-bug-routing-system-using-rag-and-multimodal-processing)
-*miro · May 11*
+### [Advanced Speaker Diarization and Attributed Transcription Using Deep Learning Models](https://www.zenml.io/llmops-database/advanced-speaker-diarization-and-attributed-transcription-using-deep-learning-models)
+*pyannoteai · Jun 05*
 
-Miro developed an AI-powered system called BugManager to streamline bug routing by using advanced techniques like Retrieval-Augmented Generation (RAG) and multimodal processing to analyze text and images from various sources. This approach can inspire tech teams to leverage AI for reducing inefficiencies and improving workflows in complex, large-scale environments.
+This is about PyannoteAI's advanced deep learning models that accurately identify "who said what and when" in multi-speaker conversations, even in challenging scenarios like overlapping speech. It could matter for a tech team working on AI products by enabling more precise transcription, improving content moderation, and enhancing user experiences in speech-driven applications.
 
 > 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
 
-### [Systematic Prompt Optimization for Production Relevance Judges Using DSPy](https://www.zenml.io/llmops-database/systematic-prompt-optimization-for-production-relevance-judges-using-dspy)
-*dropbox · Mar 25*
+### [Formal Verification and Verified AI for Mathematical Reasoning at Scale](https://www.zenml.io/llmops-database/formal-verification-and-verified-ai-for-mathematical-reasoning-at-scale)
+*axiom_math · Jun 06*
 
-Dropbox used DSPy to optimize prompts for their LLM-based relevance judge, improving accuracy and speeding up adaptation when switching between models. This approach can help tech teams reduce costs, maintain quality, and streamline deployment of AI systems across different use cases.
+Axiom Math is using formal verification combined with large language models to create AI systems capable of solving complex mathematical problems with superhuman accuracy. This approach could inspire more reliable and efficient AI solutions for high-stakes applications, where precision and trust are critical.
 
 > 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
 
@@ -30,24 +30,17 @@ Dropbox used DSPy to optimize prompts for their LLM-based relevance judge, impro
 
 ## 📰 Industry News
 
+### [Solving Tool Confusion and Design Slop in Open Model Coding Agents](https://www.zenml.io/llmops-database/solving-tool-confusion-and-design-slop-in-open-model-coding-agents)
+*commandcode · Jun 06*
+
+CommandCode fixed a major issue in AI coding agents where open models frequently made errors using tools, by adding logic to automatically correct these mistakes in real time. This breakthrough can help tech teams improve the reliability and efficiency of AI-driven development workflows, even with less expensive or open-source models.
+
+> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
+
 ### [AI-Powered Search and Agent Automation for Digital Asset Management](https://www.zenml.io/llmops-database/ai-powered-search-and-agent-automation-for-digital-asset-management)
 *bynder · May 11*
 
-Bynder leveraged AI-powered search and configurable agents to automate tagging, categorization, and compliance tasks for digital asset management, significantly improving efficiency for its users. This showcases how integrating AI tools like semantic search, embeddings, and agent-based systems can streamline workflows and deliver measurable time savings in real-world applications.
-
-> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
-
-### [Building Production AI Agent Infrastructure at Scale with Claude Managed Agents](https://www.zenml.io/llmops-database/building-production-ai-agent-infrastructure-at-scale-with-claude-managed-agents)
-*anthropic · May 08*
-
-This discusses how Anthropic's Claude Managed Agents simplify the transition from prototypes to scalable, production-ready AI systems by handling infrastructure challenges like state management and async execution. It could help tech teams streamline building and deploying autonomous agents without getting bogged down by complex backend engineering.
-
-> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
-
-### [Building and Scaling Visual Intelligence Models from Research to Production](https://www.zenml.io/llmops-database/building-and-scaling-visual-intelligence-models-from-research-to-production)
-*black_forest_labs · Apr 25*
-
-This is about how Black Forest Labs transitioned from academic research to building scalable, multimodal visual AI systems like the Flux model family, optimized for real-world applications. It highlights practical strategies for developing and deploying advanced AI models, offering insights into improving efficiency, scalability, and production feedback loops.
+Bynder developed AI-driven search and automation tools to streamline digital asset management, reducing manual tagging and enhancing content discoverability for users. This showcases how integrating AI with scalable cloud services can solve real-world bottlenecks, offering inspiration for building efficient, human-in-the-loop AI systems.
 
 > 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
 
@@ -55,73 +48,80 @@ This is about how Black Forest Labs transitioned from academic research to build
 
 ## 💡 Cool Use Cases
 
-### [Security-Focused LLM Agent Harness for Automated Vulnerability Discovery](https://www.zenml.io/llmops-database/security-focused-llm-agent-harness-for-automated-vulnerability-discovery)
-*cloudflare · May 19*
+### [Building Production Video Generation and World Models at Scale](https://www.zenml.io/llmops-database/building-production-video-generation-and-world-models-at-scale)
+*xai · Jun 06*
 
-Cloudflare integrated a specialized AI system using Anthropic's Mythos model to automate the discovery of security vulnerabilities in their infrastructure and code. This approach highlights how tailored multi-agent systems can enhance precision and scalability in addressing complex security challenges, offering valuable insights for AI-driven product development.
-
-> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
-
-### [Scaling LLM Production with Reinforcement Learning for Enterprise Agents](https://www.zenml.io/llmops-database/scaling-llm-production-with-reinforcement-learning-for-enterprise-agents)
-*adaptive_ml · May 13*
-
-Adaptive ML is using reinforcement learning to help enterprises build and improve specialized AI models that are smaller, faster, and more cost-effective. This could help tech teams overcome common roadblocks in scaling AI pilots to production while optimizing performance and costs.
+This case study explores how xAI rapidly developed scalable video and multimodal generation models from scratch, overcoming infrastructure and cost challenges. It highlights strategies and tools that could inspire efficient AI product development and optimization for tech teams.
 
 > 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
 
-### [Building Agentic Spreadsheet Automation from Process Mining to Production](https://www.zenml.io/llmops-database/building-agentic-spreadsheet-automation-from-process-mining-to-production)
-*ramp · May 11*
+### [Long-Running Autonomous Agent Evaluation in Simulated and Real-World Business Environments](https://www.zenml.io/llmops-database/long-running-autonomous-agent-evaluation-in-simulated-and-real-world-business-environments)
+*andon_labs · Jun 06*
 
-Ramp developed an AI-powered spreadsheet editor that automates complex finance workflows by transforming recorded tasks into transparent, spreadsheet-native operations. This showcases how agent-based systems and advanced AI models can streamline high-stakes applications, offering insights into building robust, scalable automation tools.
+Andon Labs is testing how AI agents perform in managing businesses over long periods, both in simulations and real-world setups like vending machines and retail stores. Understanding these challenges can help tech teams build more reliable, scalable AI systems for high-stakes applications.
 
 > 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
 
-### [Automating Trading Card Copywriting with Multi-Agent Generative AI](https://www.zenml.io/llmops-database/automating-trading-card-copywriting-with-multi-agent-generative-ai)
-*fanatics_collectibles · May 11*
+### [Building and Deploying Background Coding Agents at Scale](https://www.zenml.io/llmops-database/building-and-deploying-background-coding-agents-at-scale)
+*cognition · Jun 06*
 
-Fanatics Collectibles used a multi-agent generative AI system to automate the complex process of writing and verifying trading card copy at scale. This showcases how AI can streamline labor-intensive workflows while addressing challenges like compliance, scalability, and quality assurance.
+This article explores how Cognition built and deployed autonomous coding agents in cloud environments to write, test, and merge code at scale. It highlights key insights on infrastructure, security, and optimization that could help tech teams streamline AI-driven development workflows.
+
+> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
+
+### [Self-Service Data Analytics with Claude-Powered Agents](https://www.zenml.io/llmops-database/self-service-data-analytics-with-claude-powered-agents)
+*anthropic · Jun 04*
+
+Anthropic has implemented Claude-powered agents to handle the majority of business analytics queries with high accuracy, freeing up their data science team for more strategic tasks. This showcases how AI-driven automation can streamline data workflows while addressing common challenges like ambiguity, data freshness, and retrieval reliability.
+
+> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
+
+### [Comprehensive LLM Benchmarking for Financial Automation Tasks](https://www.zenml.io/llmops-database/comprehensive-llm-benchmarking-for-financial-automation-tasks)
+*ramp · Jun 04*
+
+Ramp created a benchmarking framework to test how well large language models handle key financial automation tasks like document processing and compliance checks. This could help tech teams optimize AI models for accuracy, cost, and speed in specialized use cases.
+
+> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
+
+### [Benchmarking and Optimizing AI Agents for Accounting Automation](https://www.zenml.io/llmops-database/benchmarking-and-optimizing-ai-agents-for-accounting-automation)
+*ramp · Jun 04*
+
+Ramp built an AI-driven tool to automate complex accounting workflows and developed a detailed benchmark to refine its agent's performance across diverse scenarios. This approach highlights effective strategies like skill ablation and prompt optimization, which could inspire better design and efficiency in AI product development.
+
+> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
+
+### [Building a Production Data Agent for 90,000 Tables at Scale](https://www.zenml.io/llmops-database/building-a-production-data-agent-for-90000-tables-at-scale)
+*openai · Jun 04*
+
+OpenAI developed a data agent to help users efficiently navigate massive datasets by leveraging GPT-5.5 and rich metadata for semantic understanding. This approach highlights how AI can streamline complex data workflows, offering valuable insights for building scalable, intelligent tools.
+
+> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
+
+### [Scaling Agentic Workflows with Temporal Cloud: Platform Engineering for Production LLM Systems](https://www.zenml.io/llmops-database/scaling-agentic-workflows-with-temporal-cloud-platform-engineering-for-production-llm-systems)
+*openai · Jun 02*
+
+This is about how OpenAI used Temporal Cloud and a platform-first approach to overcome scalability challenges, enabling their image generation service to handle 1 billion requests per week. It highlights strategies for building reliable, scalable AI systems that can streamline development and improve user experience under massive demand.
+
+> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
+
+### [Scaling Deep Research Agents through Architecture Optimization and Context Management](https://www.zenml.io/llmops-database/scaling-deep-research-agents-through-architecture-optimization-and-context-management)
+*tavily_/_nebius · Jun 02*
+
+This discusses how Tavily optimized its deep research agents by restructuring their architecture and improving context management to handle massive token processing efficiently. It highlights strategies that can inspire AI teams to enhance performance, reduce costs, and maintain quality in complex, high-stakes applications.
 
 > 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
 
 ### [AI-Powered Workflow Assistant for Seismic Data Processing](https://www.zenml.io/llmops-database/ai-powered-workflow-assistant-for-seismic-data-processing)
 *halliburton · May 11*
 
-Halliburton and AWS developed an AI assistant that simplifies seismic data workflow creation through natural language interactions, replacing manual configuration of complex tools. This showcases how generative AI can streamline high-stakes, domain-specific processes, offering insights for building efficient, specialized AI solutions.
+Halliburton, in collaboration with AWS, developed an AI assistant that simplifies seismic data workflow creation through natural language interactions, replacing a complex manual setup. This showcases how AI can streamline high-stakes, domain-specific processes, offering insights into building effective, specialized AI solutions.
 
 > 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
 
-### [AI-Driven Contract Analysis and Extraction at Scale](https://www.zenml.io/llmops-database/ai-driven-contract-analysis-and-extraction-at-scale)
-*pricewaterhousecooper_/_pwc · Apr 30*
+### [Automating Trading Card Copywriting with Multi-Agent Generative AI](https://www.zenml.io/llmops-database/automating-trading-card-copywriting-with-multi-agent-generative-ai)
+*fanatics_collectibles · May 11*
 
-PwC's AIDA leverages AI and AWS to extract structured insights from complex contracts, drastically reducing manual review time for legal and compliance teams. This showcases how scalable AI solutions can streamline high-stakes document processing, offering valuable lessons in integrating LLMs, cloud services, and DevOps practices.
-
-> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
-
-### [AI-Powered Customer Feedback Analysis System for Container Shipping](https://www.zenml.io/llmops-database/ai-powered-customer-feedback-analysis-system-for-container-shipping)
-*hapag-lloyd · May 06*
-
-Hapag-Lloyd implemented an AI-driven system to automate sentiment analysis and theme classification of customer feedback, replacing a manual, time-intensive process. This showcases how AI tools like embeddings, semantic search, and multi-agent systems can streamline workflows and enhance data-driven decision-making in complex industries.
-
-> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
-
-### [Open-Source Agent Contributions Repository](https://www.zenml.io/llmops-database/open-source-agent-contributions-repository)
-*huggingface · Apr 30*
-
-Hugging Face hosts a repository called "open-source-agent-contributions," which seems to focus on agent-based systems and integrates metadata from a Docker repository. This could be valuable for AI teams exploring open-source tools to prototype, deploy, or enhance agent-driven applications.
-
-> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
-
-### [AI-Powered Identity Verification and Fraud Detection for Online Lending](https://www.zenml.io/llmops-database/ai-powered-identity-verification-and-fraud-detection-for-online-lending)
-*sun_finance · May 01*
-
-Sun Finance leveraged AI tools like Amazon Textract and Bedrock to streamline identity verification and fraud detection in online lending, reducing manual reviews and processing times. This showcases how serverless AI solutions can enhance scalability, reliability, and compliance in high-stakes applications.
-
-> 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
-
-### [Event-Driven RAG System for Healthcare Benefits Using MCP](https://www.zenml.io/llmops-database/event-driven-rag-system-for-healthcare-benefits-using-mcp)
-*daisy_health · Apr 30*
-
-Daisy Health built an event-driven AI system to process healthcare benefits documents in real-time, using Anthropic’s Model Context Protocol and AWS Lambda for automated vectorization and chatbot integration. This showcases how scalable architectures can streamline document-heavy workflows and improve user-facing AI applications.
+Fanatics Collectibles used a multi-agent generative AI system to automate the time-intensive process of writing trading card copy, integrating data pipelines, web search, and quality assurance. This showcases how AI can streamline complex workflows while maintaining compliance and scalability, offering valuable insights for building robust, efficient AI-driven systems.
 
 > 🤖 **AI Judge:** Faithfulness ⭐⭐⭐  Clarity ⭐⭐⭐
 
@@ -129,7 +129,7 @@ Daisy Health built an event-driven AI system to process healthcare benefits docu
 
 ## 👋 Until Next Week
 
-Thanks for joining us this week! Dive into the links, spark your curiosity, and explore the endless possibilities of AI. Wishing you a week filled with inspiration and discovery—see you next time!
+Thanks for joining us this week! Dive into the links, spark your curiosity, and let AI inspire your creativity. Wishing you a fantastic week ahead—see you next time!
 
 
 *This newsletter is auto-generated by the Odido AI Newsletter Pipeline.*
